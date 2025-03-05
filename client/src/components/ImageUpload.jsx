@@ -14,7 +14,8 @@ const ImageUpload = ({ refreshImages }) => {
     formData.append("orientation", orientation);
 
     try {
-      await axios.post("http://localhost:8000/api/upload-image", formData);
+      await axios.post("https://upload-image-backend.onrender.com
+/api/upload-image", formData);
       refreshImages(); // Refresh  karne ke liye use kiya
       alert("Image uploaded successfully!");
     } catch (error) {
