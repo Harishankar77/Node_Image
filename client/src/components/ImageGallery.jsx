@@ -6,7 +6,8 @@ const ImageGallery = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/images")
+      .get("https://upload-image-backend.onrender.com
+/api/images")
       .then((res) => setImages(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -25,7 +26,8 @@ const ImageGallery = () => {
             }`}
           >
             <img
-              src={`http://localhost:8000${image.imageUrl}`}
+              src={`https://upload-image-backend.onrender.com
+${image.imageUrl}`}
               alt="Uploaded"
               className="w-full h-full object-cover"
             />
